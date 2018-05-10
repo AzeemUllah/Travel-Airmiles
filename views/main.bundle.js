@@ -302,7 +302,7 @@ var DashboardComponent = /** @class */ (function () {
         }, 1000);
         if (localStorage.getItem('id')) {
             if (parseInt(localStorage.getItem('id')) > 0) {
-                this.http.post("http://localhost:3000/api/get-user", {
+                this.http.post("http://104.236.115.135:3000/api/get-user", {
                     'id': localStorage.getItem('id')
                 })
                     .subscribe(function (val) {
@@ -328,7 +328,7 @@ var DashboardComponent = /** @class */ (function () {
                         //   $('#currentDiv').css('display','none');
                         // });
                         //
-                        _this.http.post("http://localhost:3000/api/get-alert-all", {
+                        _this.http.post("http://104.236.115.135:3000/api/get-alert-all", {
                             'id': localStorage.getItem('id')
                         })
                             .subscribe(function (val) {
@@ -344,7 +344,7 @@ var DashboardComponent = /** @class */ (function () {
                             //   $('#oldDiv').css('display','none');
                             //   $('#currentDiv').css('display','block');
                             // });
-                            _this.http.post("http://localhost:3000/api/get-alert-expired", {
+                            _this.http.post("http://104.236.115.135:3000/api/get-alert-expired", {
                                 'id': localStorage.getItem('id')
                             })
                                 .subscribe(function (val) {
@@ -353,7 +353,7 @@ var DashboardComponent = /** @class */ (function () {
                             }, function (response) {
                                 console.log("POST call in error", response);
                             }, function () {
-                                _this.http.post("http://localhost:3000/api/get-alert-upcomming", {
+                                _this.http.post("http://104.236.115.135:3000/api/get-alert-upcomming", {
                                     'id': localStorage.getItem('id')
                                 })
                                     .subscribe(function (val) {
@@ -448,7 +448,7 @@ var DashboardComponent = /** @class */ (function () {
             this.class = '';
         }
         //console.log(this.tripType,this.from,this.to,this.adults,this.sendEvery,this.class,this.connections,this.miles,this.fromDate, this.toDate);
-        this.http.post("http://localhost:3000/api/save-alert", this.data)
+        this.http.post("http://104.236.115.135:3000/api/save-alert", this.data)
             .subscribe(function (val) {
             if (val == 1) {
                 _this.toastr.success("Alert Saved!", 'Success!');
@@ -636,7 +636,7 @@ var HomepageComponent = /** @class */ (function () {
         if (localStorage.getItem('id')) {
             if (parseInt(localStorage.getItem('id')) > 0) {
                 this.loggedIn = true;
-                this.http.post("http://localhost:3000/api/get-user", {
+                this.http.post("http://104.236.115.135:3000/api/get-user", {
                     'id': localStorage.getItem('id')
                 })
                     .subscribe(function (val) {
@@ -691,7 +691,7 @@ var HomepageComponent = /** @class */ (function () {
             this.toastr.error('Profile Picture Required!', 'Field Required!');
         }
         else {
-            this.http.post("http://localhost:3000/api/signup", {
+            this.http.post("http://104.236.115.135:3000/api/signup", {
                 "firstName": this.firstName,
                 "lastName": this.lastName,
                 "email": this.email,
@@ -729,7 +729,7 @@ var HomepageComponent = /** @class */ (function () {
             this.toastr.error('Password Required!', 'Field Required!');
         }
         else {
-            this.http.post("http://localhost:3000/api/login", {
+            this.http.post("http://104.236.115.135:3000/api/login", {
                 "email": this.loginEmail,
                 "password": this.loginPassword
             })
