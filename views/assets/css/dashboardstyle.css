@@ -1,0 +1,636 @@
+/*NAVBAR*/
+.navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+    border: none;
+    font-weight: 100;
+    font-size: 0.8em;
+
+}
+.navbar-default .navbar-nav .l{
+
+    border-right: 1px #C5C8C9 solid;
+    height: 40px;
+}
+.navbar-default .navbar-nav li a {
+    color: #FFFFFF;
+}
+.navbar-nav{
+    color: #FFFFFF;
+    padding-top: 20px;
+}
+.logo2 img{
+    height: 90px;
+    width: 65px;
+}
+.s p{
+    line-height: 0;
+    font-weight: 100;
+    font-size: 0.8em;
+}
+.s h4{
+    font-weight: 100;
+    font-size: 0.9em;
+}
+.hamburger {
+    height: 30px;
+    margin: 26px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    z-index: 120;
+}
+
+.hamburger div {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 40px;
+    height: 2px;
+    margin-top: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked + .hamburger .top {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 22.5px;
+}
+
+#toggle:checked + .hamburger .meat {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -5px;
+}
+
+#toggle:checked + .hamburger .bottom {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+#toggle:checked ~ .menu {
+    height: 480px;
+}
+.navigation {
+    display: none;
+}
+a{
+    cursor: pointer;
+}
+/* Menu */
+.menu {
+    width: 100%;
+    background-color: #067df4;
+    /*opacity: 0.9;*/
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    grid-row-gap: 25px;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    width: auto;
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    z-index: 120;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+a:focus, a:hover {
+    text-decoration: none !important;
+}
+
+.menu a{
+    color: #FFFFFF;
+}
+.menu a:first-child {
+    margin-top: 58px;
+}
+
+
+.link {
+    width: 100%;
+    margin: 0;
+    /*padding: 10px 0;*/
+    font: 700 20px "Oswald", sans-serif;
+}
+
+/*NAVBAR-ENDS*/
+
+/*HOME*/
+
+#home{
+    background: url("./../../assets/img/background-dashboard.png");
+    /*height: -webkit-fill-available;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+#home p{
+    margin-top: -145px;
+    color: #CAD3D3;
+}
+/*HOME-ENDS*/
+
+#route .first-row p{
+     color: #878787;
+     font-size: 0.9em;
+     font-weight: 400;
+     margin-top: 20px;
+    margin-bottom: 0px;
+ }
+#route .first-row {
+    background-color: #EDF2F5;
+    padding-bottom: 20px;
+    margin-top: -91px;
+}
+#route .second-row p{
+    color: #878787;
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-top: 30px;
+
+}
+.selectpicker{
+    border: none;
+    background: transparent;
+    padding-left: 0px;
+    background-color: #edf2f5 !important;
+    border-color: #edf2f5 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.open{
+    background-color: #EDF2F5;
+}
+
+.datpiker1{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-left: -28px;
+    padding: 0px;
+    width:100%;
+}
+.datpiker2{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    margin-left: -50px;
+    padding: 0px;
+    width:100%;
+}
+.pickers{
+    padding: 0;
+}
+#route .dash{
+    position: absolute;
+    margin-left: -46px;
+    margin-top: 6px;
+}
+.datpiker1:focus{
+    box-shadow: none;
+}
+.datpiker2:focus{
+    box-shadow: none;
+}
+.fa{
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 9px;
+
+}
+.last-para{
+    margin-left: -27px;
+}
+.radio-button{
+    padding: 0px;
+}
+.last{
+    margin-top: 20px;
+}
+.advance{
+    margin-top: 40px;
+}
+.btn1 {
+    margin-top: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: #014FA2;
+    border-radius: 20px;
+    border: none;
+}
+/*.btn .dropdown-toggle .selectpicker .btn-default{*/
+/*<!--border: none;-->*/
+/*<!--border-bottom: 1px solid red;-->*/
+/*<!--!* border-color: transparent; *!-->*/
+/*<!--background-color: transparent;*/
+/*<!--border-radius: 0;*/
+/*}*/
+
+/*ROUTE-ENDS*/
+/*body section css*/
+.head{
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin-top: 20px;
+    font-weight: 200;
+
+}
+
+.head-link-tab1{
+    color: #014FA2;
+    text-decoration: none;
+
+}
+.head-link-tab{
+    text-decoration: none;
+    color: #DDDDDD;
+}
+
+.schedule-row1{
+    box-shadow: 0 5px 32px 0 rgba(0,0,0,.1);
+    margin-top: 30px;
+}
+
+.row1-2nd-dive{
+    padding-top: 13px;
+}
+
+.row1-3rd-dive{
+    padding-top: 13px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.schedule-sub-row1{
+    font-size: 1.5em;
+    color: #014FA2;
+}
+
+.btn-upcomming{
+    margin-top: 2%;
+    position: absolute;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 0.4em;
+    color: #ffffff;
+    background-color: #8CC634;
+    border-radius: 20px;
+    border: none;
+    padding-right: 10px;
+}
+
+
+.schedule-row2-text{
+    color: #DDDDDD;
+}
+
+.schedule-row2-span{
+    color: #7D7B7B;
+}
+
+.schedule-row3-text{
+    color: #DDDDDD;
+}
+
+.schedule-row3-span{
+    color: #014FA2;
+}
+
+.schedule-row4-text{
+    margin-top: 25px;
+    color: #B5B5B5;
+}
+
+.icon-wifi{
+    color: #B5B5B5;
+}
+
+.schedule-departure{
+    margin-top: -7px;
+    color: #9C9C9E;
+}
+
+.social-icon{
+    margin-left: 8px;
+    color: #DDDDDD;
+}
+
+.schedule-boston{
+    font-weight: 200;
+    font-size: 1.2em;
+    color: #2C4558;
+    letter-spacing: 1px;
+    margin-top: -6px;
+}
+
+.schedule-date{
+    font-size: 0.7em;
+    margin-top: -7px;
+    color: #9D9D9D;
+}
+
+.london{
+    margin-top: 30px;
+}
+
+/*body section css*/
+
+
+@media (max-width:768px) {
+#add{
+    text-align: center;
+}
+    .second-row{
+        text-align: center;
+    }
+
+    .logo img {
+        margin-left: 10px;
+    }
+
+    #navbar {
+        display: block;
+    }
+        .navbar-toggle {
+        margin-top: 20px;
+        margin-right: 15px;
+    }
+
+    .navbar-default .navbar-nav .l {
+        display: none;
+    }
+
+    #home .btn1 {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    #home .btn2 {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .city-picker1{
+        width: 45%;
+        padding: 0;
+        margin-left: 5%;
+    }
+    .city-picker2{
+        width: 50%;
+        padding: 0;
+    }
+    .last-part{
+        padding-left: 135px;
+    }
+    .selectpicker{
+        text-align: center;
+    }
+    .first-part{
+        text-align: center;
+}
+    .first-part p{
+        text-align: center;
+    }
+    .last-part p{
+        margin-left: 20px;
+    }
+
+    .bootstrap-select{
+        width: 90% !important;
+    }
+
+
+
+}
+
+
+
+@media (min-width: 767px) and (max-width: 769px) {
+    .first-part{
+        margin-left: 55px;
+    }
+    .first-part p{
+        margin-left: -155px;
+    }
+
+    .last-part{
+        padding-left: 285px;
+    }
+    /*.first-part p{*/
+        /*margin-left: -130px;*/
+    /*}*/
+    .last-part p{
+        margin-left: 25px;
+    }
+    #route .first-row{
+        margin-top: -6.5px;
+    }
+}
+@media (min-width: 1023px) and (max-width: 1025px) {
+
+
+    #route .first-row{
+        margin-top: -103px;
+    }
+
+}
+@media (max-width:400px){
+    .hamburger{
+        margin-right: 35px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hamburger{
+        display: none;
+    }
+    .menu a{
+        padding-bottom: 100px;
+    }
+
+}
+
+/*media query of tablet*/
+@media(min-width: 777px) and (max-width: 992px){
+    .row1-2nd-dive {
+        margin-left: 105px;
+        padding-top: 13px;
+    }
+
+    .schedule-sub-row1 {
+        font-size: 1em;
+        color: #014FA2;
+    }
+    .schedule-boston {
+        font-weight: 200;
+        font-size: 1em;
+        color: #2C4558;
+        letter-spacing: 1px;
+        margin-top: -6px;
+    }
+    .schedule-date {
+        font-size: 0.5em;
+        margin-top: -7px;
+        color: #9D9D9D;
+
+    }
+
+}
+
+@media(min-width: 992px) and (max-width: 1199px){
+    .row1-2nd-dive {
+        margin-left: 40px;
+        padding-top: 13px;
+    }
+
+
+
+    .row1-3rd-dive {
+        margin-left: 100px;
+        padding-top: 13px;
+    }
+
+}
+/*media query of tablet*/
+
+/*media query of mobile start*/
+@media(max-width: 768px) {
+    .img-row1{
+        display: none;
+    }
+
+    .schedule-sub-row1 {
+        width: 130%;
+        font-size: 0.9em;
+        color: #014FA2;
+    }
+
+
+    .schedule-row2-text {
+        font-size: 0.7em;
+        color: #DDDDDD;
+    }
+
+    .schedule-row3-text {
+        font-size: 0.6em;
+        color: #DDDDDD;
+    }
+
+    .plan-img{
+        width: 20px;
+        height: auto;
+    }
+
+    .schedule-departure {
+        font-size: 0.6em;
+        margin-top: -7px;
+        color: #9C9C9E;
+    }
+
+    .schedule-boston {
+        font-weight: 200;
+        font-size: 0.7em;
+        color: #2C4558;
+        letter-spacing: 1px;
+        margin-top: -6px;
+    }
+
+    .schedule-date {
+        font-size: 0.5em;
+        margin-top: -7px;
+        color: #9D9D9D;
+    }
+
+
+    .london {
+        margin-top: 18px;
+    }
+
+    .btn-upcomming {
+        margin-top: 1px;
+        margin-left: 8px;
+        padding-left: 10px;
+        padding-top: 4px;
+        font-size: 0.5em;
+        color: #ffffff;
+        background-color: #8CC634;
+        border-radius: 20px;
+        border: none;
+        padding-right: 10px;
+    }
+
+    .americanAirLine{
+        width: 85px;
+        height: auto;
+    }
+
+
+    .row1-2nd-dive {
+        padding-top: 25px;
+    }
+
+    .head {
+        margin-left: 30px;
+        letter-spacing: 1px;
+        font-size: 1em;
+        margin-top: 20px;
+        font-weight: 200;
+    }
+
+
+    .head-link-tab1 {
+        margin-left: 30px;
+        font-size: 0.7em;
+        color: #014FA2;
+        text-decoration: none;
+    }
+
+
+
+    .head-link-tab {
+        font-size: 0.7em;
+        text-decoration: none;
+        color: #DDDDDD;
+    }
+
+    .schedule-row1 {
+        box-shadow: 0 5px 32px 0 rgba(0,0,0,.1);
+        margin-top: 15px;
+    }
+
+
+}
+
+
+/*media query of mobile end*/
+
+
+
+
+.box-shadow{
+    box-shadow: 0 5px 32px 0 rgba(0,0,0,.1);
+    padding-bottom: 2%;
+}
+
+#route{
+    margin-bottom: 5%;
+}

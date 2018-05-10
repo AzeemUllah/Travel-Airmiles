@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TravelAirmiles</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <link href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <title>Travel Airmiles</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/img/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/css/select2.css"/>
+
+  <!--<link rel="stylesheet" type="text/css" href="./assets/css/Style.css" />-->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+  <style>
+    /* remove the original arrow */
+    .selected{
+      border-bottom-width: 1px;
+      border-color: white;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      background: url(img/caret.png) no-repeat 95% #fff;
+      border-bottom-color: #e2e2e2;
+    }
+    .selected:focus{
+      border-bottom-width: 1px;
+      border-color: white;
+      box-shadow: none;
+      border-bottom-color: #e2e2e2;
+    }
+    .slideInDown {
+      animation-name: slideInDown;
+      animation-duration: 0.5s;
+    }
+    .date{
+      width: 100%;
+    }
+
+  </style>
+
+
+</head>
+<body style="padding-right: 0px;">
+  <app-root></app-root>
+
+
+
+
+  <script>
+
+    (function ($) {
+      $(document).ready(function(){
+
+    var countFlight = 1;
+    $("#flightNextDiv").click(function () {
+      console.log(countFlight);
+
+      if(countFlight > 2){
+        // $("#flightNextDiv").css("opacity","0");
+        // $("#flightPreviousDiv").css("opacity","1");
+        countFlight = 0;
+
+        $("#flightThree").addClass("slideOutLeft");
+
+        setTimeout(function () {
+          $("#flightThree").css("display", "none");
+
+          $("#flightOne").removeClass("slideInRight");
+          $("#flightOne").removeClass("slideOutRight");
+          $("#flightOne").removeClass("slideOutLeft");
+          $("#flightOne").removeClass("slideOutLeft");
+          $("#flightOne").css("display", "block");
+          $("#flightOne").addClass("slideInRight");
+        }, 1000)
+      }
+      else {
+        if (countFlight == 1) {
+          $("#flightOne").addClass("slideOutLeft");
+
+          setTimeout(function () {
+            $("#flightOne").css("display", "none");
+
+            $("#flightTwo").removeClass("slideInRight");
+            $("#flightTwo").removeClass("slideOutRight");
+            $("#flightTwo").removeClass("slideOutLeft");
+            $("#flightTwo").removeClass("slideOutLeft");
+            $("#flightTwo").css("display", "block");
+            $("#flightTwo").addClass("slideInRight");
+          }, 1000)
+        }
+
+        if (countFlight == 2) {
+          $("#flightTwo").addClass("slideOutLeft");
+
+          setTimeout(function () {
+            $("#flightTwo").css("display", "none");
+
+            $("#flightThree").removeClass("slideInRight");
+            $("#flightThree").removeClass("slideOutRight");
+            $("#flightThree").removeClass("slideOutLeft");
+            $("#flightThree").removeClass("slideOutLeft");
+            $("#flightThree").css("display", "block");
+            $("#flightThree").addClass("slideInRight");
+          }, 1000)
+        }
+      }
+
+      countFlight++;
+
+    });
+
+
+    $("#flightPreviousDiv").click(function () {
+      console.log(countFlight + "from previous");
+      if(countFlight <= 1){
+        // $("#flightPreviousDiv").css("opacity","0");
+        // $("#flightNextDiv").css("opacity","1");
+
+        countFlight = 4;
+        $("#flightOne").addClass("slideOutRight");
+        setTimeout(function () {
+          $("#flightOne").css("display","none");
+
+          $("#flightThree").removeClass("slideInRight");
+          $("#flightThree").removeClass("slideOutRight");
+          $("#flightThree").removeClass("slideOutLeft");
+          $("#flightThree").removeClass("slideOutLeft");
+          $("#flightThree").css("display","block");
+          $("#flightThree").addClass("slideInLeft");
+        },1000);
+
+      }
+      if(countFlight == 3){
+        $("#flightThree").addClass("slideOutRight");
+        setTimeout(function () {
+          $("#flightThree").css("display","none");
+
+          $("#flightTwo").removeClass("slideInRight");
+          $("#flightTwo").removeClass("slideOutRight");
+          $("#flightTwo").removeClass("slideOutLeft");
+          $("#flightTwo").removeClass("slideOutLeft");
+          $("#flightTwo").css("display","block");
+          $("#flightTwo").addClass("slideInLeft");
+        },1000);
+      }
+
+      if(countFlight == 2){
+        console.log("Here");
+        $("#flightTwo").addClass("slideOutRight");
+        setTimeout(function () {
+          $("#flightTwo").css("display","none");
+
+          $("#flightOne").removeClass("slideInRight");
+          $("#flightOne").removeClass("slideOutRight");
+          $("#flightOne").removeClass("slideOutLeft");
+          $("#flightOne").removeClass("slideOutLeft");
+          $("#flightOne").css("display","block");
+          $("#flightOne").addClass("slideInLeft");
+        },1000);
+      }
+
+      countFlight--;
+
+    });
+
+
+
+
+    $("#reviewOnePerson").click(function () {
+      $("#reviewOnePerson").css("display","block");
+      $("#reviewOnePerson").addClass("fadeIn");
+      $("#reviewOnePerson").removeClass("faded");
+      $("#reviewOnePerson").addClass("notFaded");
+
+      $("#reviewTwoPerson").removeClass("notFaded");
+      $("#reviewTwoPerson").removeClass("fadeIn");
+      $("#reviewThreePerson").removeClass("notFaded");
+      $("#reviewThreePerson").removeClass("fadeIn");
+      $("#reviewTwoPerson").addClass("faded");
+      $("#reviewThreePerson").addClass("faded");
+
+
+      $("#reviewTwo").addClass("slideOutLeft");
+      $("#reviewThree").addClass("slideOutLeft");
+
+      $("#reviewTwo").removeClass("slideInRight");
+      $("#reviewThree").removeClass("slideInRight");
+
+      setTimeout(function () {
+        $("#reviewTwo").css("display","none");
+        $("#reviewThree").css("display","none");
+
+        $("#reviewOne").css("display","block");
+
+        $("#reviewOne").removeClass("slideOutLeft");
+        $("#reviewOne").addClass("slideInRight");
+      },1100);
+    });
+
+
+    $("#reviewTwoPerson").click(function () {
+      $("#reviewTwoPerson").css("display","block");
+      $("#reviewTwoPerson").addClass("fadeIn");
+      $("#reviewTwoPerson").removeClass("faded");
+      $("#reviewTwoPerson").addClass("notfaded");
+
+      $("#reviewOnePerson").removeClass("fadeIn");
+      $("#reviewOnePerson").removeClass("notFaded");
+      $("#reviewThreePerson").removeClass("notFaded");
+      $("#reviewThreePerson").removeClass("fadeIn");
+      $("#reviewOnePerson").addClass("faded");
+      $("#reviewThreePerson").addClass("faded");
+
+
+
+
+
+
+      $("#reviewOne").addClass("slideOutLeft");
+      $("#reviewThree").addClass("slideOutLeft");
+
+      $("#reviewOne").removeClass("slideInRight");
+      $("#reviewThree").removeClass("slideInRight");
+
+      setTimeout(function () {
+        $("#reviewOne").css("display","none");
+        $("#reviewThree").css("display","none");
+
+        $("#reviewTwo").css("display","block");
+
+        $("#reviewTwo").removeClass("slideOutLeft");
+        $("#reviewTwo").addClass("slideInRight");
+      },1100);
+
+    });
+
+
+    $("#reviewThreePerson").click(function () {
+      $("#reviewThreePerson").css("display","block");
+      $("#reviewThreePerson").addClass("fadeIn");
+      $("#reviewThreePerson").removeClass("faded");
+      $("#reviewThreePerson").addClass("notfaded");
+
+      $("#reviewOnePerson").removeClass("fadeIn");
+      $("#reviewTwoPerson").removeClass("fadeIn");
+      $("#reviewOnePerson").removeClass("notFaded");
+      $("#reviewTwoPerson").removeClass("notFaded");
+      $("#reviewOnePerson").addClass("faded");
+      $("#reviewTwoPerson").addClass("faded");
+
+
+
+
+      $("#reviewOne").addClass("slideOutLeft");
+      $("#reviewTwo").addClass("slideOutLeft");
+
+      $("#reviewOne").removeClass("slideInRight");
+      $("#reviewTwo").removeClass("slideInRight");
+
+      setTimeout(function () {
+        $("#reviewOne").css("display","none");
+        $("#reviewTwo").css("display","none");
+
+        $("#reviewThree").css("display","block");
+
+        $("#reviewThree").removeClass("slideOutLeft");
+        $("#reviewThree").addClass("slideInRight");
+      },1100);
+    });
+
+    var countCarrier = 1;
+    $("#carrierNextDiv").click(function () {
+      console.log(countCarrier);
+
+      if(countCarrier > 2){
+        // $("#flightNextDiv").css("opacity","0");
+        // $("#flightPreviousDiv").css("opacity","1");
+        countCarrier = 0;
+
+        $("#carrierthree").addClass("slideOutLeft");
+
+        setTimeout(function () {
+          $("#carrierthree").css("display", "none");
+
+          $("#carrierone").removeClass("slideInRight");
+          $("#carrierone").removeClass("slideOutRight");
+          $("#carrierone").removeClass("slideOutLeft");
+          $("#carrierone").removeClass("slideOutLeft");
+          $("#carrierone").css("display", "block");
+          $("#carrierone").addClass("slideInRight");
+        }, 1000)
+      }
+      else {
+        if (countCarrier == 1) {
+          $("#carrierone").addClass("slideOutLeft");
+
+          setTimeout(function () {
+            $("#carrierone").css("display", "none");
+
+            $("#carriertwo").removeClass("slideInRight");
+            $("#carriertwo").removeClass("slideOutRight");
+            $("#carriertwo").removeClass("slideOutLeft");
+            $("#carriertwo").removeClass("slideOutLeft");
+            $("#carriertwo").css("display", "block");
+            $("#carriertwo").addClass("slideInRight");
+          }, 1000)
+        }
+
+        if (countCarrier == 2) {
+          $("#carriertwo").addClass("slideOutLeft");
+
+          setTimeout(function () {
+            $("#carriertwo").css("display", "none");
+
+            $("#carrierthree").removeClass("slideInRight");
+            $("#carrierthree").removeClass("slideOutRight");
+            $("#carrierthree").removeClass("slideOutLeft");
+            $("#carrierthree").removeClass("slideOutLeft");
+            $("#carrierthree").css("display", "block");
+            $("#carrierthree").addClass("slideInRight");
+          }, 1000)
+        }
+      }
+
+      countCarrier++;
+
+    });
+
+
+    $("#carrierPreviousDiv").click(function () {
+      console.log(countCarrier + "from previous");
+      if(countCarrier <= 1){
+        // $("#flightPreviousDiv").css("opacity","0");
+        // $("#flightNextDiv").css("opacity","1");
+
+        countCarrier = 4;
+        $("#carrierone").addClass("slideOutRight");
+        setTimeout(function () {
+          $("#carrierone").css("display","none");
+
+          $("#carrierthree").removeClass("slideInRight");
+          $("#carrierthree").removeClass("slideOutRight");
+          $("#carrierthree").removeClass("slideOutLeft");
+          $("#carrierthree").removeClass("slideOutLeft");
+          $("#carrierthree").css("display","block");
+          $("#carrierthree").addClass("slideInLeft");
+        },1000);
+
+      }
+      if(countCarrier == 3){
+        $("#carrierthree").addClass("slideOutRight");
+        setTimeout(function () {
+          $("#carrierthree").css("display","none");
+
+          $("#carriertwo").removeClass("slideInRight");
+          $("#carriertwo").removeClass("slideOutRight");
+          $("#carriertwo").removeClass("slideOutLeft");
+          $("#carriertwo").removeClass("slideOutLeft");
+          $("#carriertwo").css("display","block");
+          $("#carriertwo").addClass("slideInLeft");
+        },1000);
+      }
+
+      if(countCarrier == 2){
+        console.log("Here");
+        $("#carriertwo").addClass("slideOutRight");
+        setTimeout(function () {
+          $("#carriertwo").css("display","none");
+
+          $("#carrierone").removeClass("slideInRight");
+          $("#carrierone").removeClass("slideOutRight");
+          $("#carrierone").removeClass("slideOutLeft");
+          $("#carrierone").removeClass("slideOutLeft");
+          $("#carrierone").css("display","block");
+          $("#carrierone").addClass("slideInLeft");
+        },1000);
+      }
+
+      countCarrier--;
+
+    });
+    // (function ($) {
+    //     $(document).ready(function(){
+    //
+    //
+    //         $(function () {
+    //             $(window).scroll(function () {
+    //                 if ($(this).scrollTop() > 250) {
+    //                     $(".navbar").css("display","none");
+    //                     $("#navbarLogo").css("display","none");
+    //
+    //                 } else {
+    //                     if($( window ).width() > 400) {
+    //                         $(".navbar").css("display", "block");
+    //                         $("#navbarLogo").css("display","block");
+    //                     }
+    //                     else{
+    //                         $(".navbar").css("display","none");
+    //                         $("#navbarLogo").css("display","none");
+    //                     }
+    //                 }
+    //             });
+    //         });
+    //
+    //     });
+    // }(jQuery));
+      });
+    }(jQuery));
+
+  </script>
+  <!--Navbar-Fade-->
+
+  <script>
+
+    (function ($) {
+      $(document).ready(function(){
+
+        $(".navbar").show();
+
+        $(function(){
+          $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+              $('.navbar').fadeOut();
+            } else {
+              $('.navbar').fadeIn();
+            }
+          });
+        });
+
+      });
+    }(jQuery));
+  </script>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
+
+  <script>
+
+
+
+  </script>
+  <!--Navbar-Fade-->
+  <script>
+
+  </script>
+  <script>
+
+    var datapicker1;
+    var datapicker2;
+
+
+
+
+
+    (function ($) {
+      $(document).ready(function () {
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1;
+        var yyyy = today.getFullYear();
+        today = mm+'/'+dd+'/'+yyyy;
+
+        setInterval(function(){
+          if(datapicker1.length == 0){
+            datapicker1 =  $('input[name="birthday"]').daterangepicker({
+              singleDatePicker: true,
+              showDropdowns: true,
+              startDate: moment().add(0, 'day'),
+              minDate: moment(),
+            });
+
+            datapicker2 = $('input[name="birthday1"]').daterangepicker({
+              singleDatePicker: true,
+              showDropdowns: true,
+              startDate: moment().add(0, 'day'),
+              minDate: moment(),
+            });
+          }
+        },1000);
+
+        var url      = (window.location.pathname).replace('/','');
+        console.log(url);
+        if(url == 'dashboard'){
+          $("head link[rel='stylesheet']").last().after('<link rel="stylesheet" type="text/css" href="./assets/css/dashboardstyle.css" />');
+        }
+
+
+        // var clicked = true;
+        // $('#advanced').on('click',function(){
+        //   console.log(clicked)
+        //   if(clicked == true){
+        //     //$('#add').css("display","block");
+        //     $('#add').append(' <div class="col-md-2 animated slideInDown"> <select [(ngModel)]="class" class="form-control selected" id="sel1"> <option value="" hidden>Select Class</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div><div class="col-md-2 col-md-offset-1 animated slideInDown"> <select [(ngModel)]="connections" class="form-control selected" id="sel1"> <option value="" hidden>Connections</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div><div class="col-md-2 col-md-offset-1 animated slideInDown"> <select [(ngModel)]="miles" class="form-control selected" id="sel1"> <option value="" hidden>Executed Miles</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div><div class="col-md-2 col-md-offset-1 animated slideInDown"> </div>')
+        //   }
+        //   clicked = false;
+        // });
+
+
+        $(function () {
+          datapicker1 = $('input[name="birthday"]').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true,
+            startDate: moment().add(0, 'day'),
+            minDate: moment(),
+          });
+        });
+
+        $(function () {
+          datapicker2 = $('input[name="birthday1"]').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true,
+            startDate: moment().add(0, 'day'),
+            minDate: moment(),
+          });
+        });
+
+        $(".navbar").show();
+
+        $(function () {
+          $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+              $('.navbar').fadeOut();
+            } else {
+              $('.navbar').fadeIn();
+            }
+          });
+        });
+
+      });
+    }(jQuery));
+  </script>
+
+
+
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
