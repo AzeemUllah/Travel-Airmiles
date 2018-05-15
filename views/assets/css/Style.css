@@ -583,6 +583,10 @@ li {
         margin-right: 1%;
         margin-left: 1%;
     }
+
+    #sideBarToggle{
+      display: block;
+    }
 }
 
 @media (max-width:992px){
@@ -907,3 +911,139 @@ a{
 #allDiv{
   margin-bottom: 100px !important;
 }
+
+
+
+
+
+.signUp-whole-div{
+  background-color: white;
+  margin-top: 80px;
+}
+
+.signUp-left-div{
+  background-repeat: no-repeat;
+  background-image: url("nature-background-31.jpg");
+  opacity: 0.5;
+}
+
+.signUp-left-div-head{
+  font-weight: 300;
+  font-size: 3.5em;
+  margin-top: 80px;
+  color: #ffff;
+  text-align: center;
+}
+
+.sign-cross{
+  margin-top: 20px;
+  margin-right: 21px;
+  color: #929292;
+}
+
+.signUp-left-div-para {
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ffff;
+}
+
+.signUp-left-div-para2 {
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ffff;
+}
+
+.logo-img{
+  margin-top: 230px;
+  margin-bottom: 60px;
+}
+
+.form-group1{
+  margin-top: 65px;
+}
+
+.form-group{
+  margin-top: 20px;
+}
+
+.form-group1 , .form-group label{
+  color: #929292;
+  font-weight: 300;
+}
+
+.form-group1 label{
+  color: #929292;
+  font-weight: 300;
+}
+
+.form-control{
+  box-shadow: none;
+  border: transparent;
+  border-bottom: 1px solid #929292;
+  border-radius: 0;
+}
+
+.signUp-anchor{
+  color: #014FA2;
+}
+
+.checkbox{
+  margin-top: 50px;
+}
+
+
+.btn-signUp {
+  font-size: 1.2em;
+  margin-top: 50px;
+  background-color: #014FA2;
+  color: #ffffff;
+  width: 180px;
+  height: 50px;
+
+}
+
+.btn-signUp:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.checkbox label{
+  color: #929292;
+}
+
+
+.logIn{
+  color: #014FA2;
+}
+
+.login-para{
+  margin-top: 60px;
+  margin-left: 60px;
+  font-size: 1.4em;
+}
+
+@media(max-width: 768px) {
+  .logo-img {
+    margin-top: 5px;
+    margin-bottom: 60px;
+  }
+
+  .btn-signUp {
+    font-size: 1.2em;
+    margin-top: 50px;
+    background-color: #014FA2;
+    color: #ffffff;
+    width: 130px;
+    height: 40px;
+  }
+
+  .signUp-whole-div {
+    background-color: white;
+    margin-top: 80px;
+    padding-bottom: 20px;
+  }
+}
+
+

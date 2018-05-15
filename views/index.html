@@ -57,7 +57,7 @@
 
 
 </head>
-<body style="padding-right: 0px;">
+<body style="padding-right: 0px !important;">
   <app-root></app-root>
 
 
@@ -471,6 +471,12 @@
 
     (function ($) {
       $(document).ready(function () {
+
+        setInterval(function (){
+          $("body").css("padding-right","0px");
+
+        },1000);
+
 
         var today = new Date();
         var dd = today.getDate();
