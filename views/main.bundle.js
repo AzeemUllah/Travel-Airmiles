@@ -707,6 +707,12 @@ var HomepageComponent = /** @class */ (function () {
                 else {
                     _this.insertId = val['data'];
                     __WEBPACK_IMPORTED_MODULE_1_jquery__('#signupModalCloseBtn').click();
+                    _this.firstName = '';
+                    _this.lastName = '';
+                    _this.email = '';
+                    _this.password = '';
+                    _this.username = '';
+                    _this.file = '';
                     _this.toastr.success('Signup Sucessful', 'Sucess!');
                 }
             }, function (response) {
