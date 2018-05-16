@@ -5,7 +5,7 @@ var cors = require('cors');
 var md5  = require('md5');
 const app = express();
 
-app.use(cors({origin: 'http://localhost:4200'}));
+app.use(cors({origin: 'http://thethinkcity.com:3000/'}));
 
 var config = {
     user: 'sa',
