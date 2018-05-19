@@ -425,15 +425,17 @@ var DashboardComponent = /** @class */ (function () {
         else {
             this.toDate = '-';
         }
-        if (__WEBPACK_IMPORTED_MODULE_1_jquery__('#toDate').val() < __WEBPACK_IMPORTED_MODULE_1_jquery__('#fromDate').val()) {
-            this.toastr.error("Invalid Travel Dates!", 'Error!');
-            __WEBPACK_IMPORTED_MODULE_1_jquery__("#fromDate").css("color", "red");
-            __WEBPACK_IMPORTED_MODULE_1_jquery__("#toDate").css("color", "red");
-            isAddable = false;
-        }
-        else {
-            __WEBPACK_IMPORTED_MODULE_1_jquery__("#fromDate").css("color", "#555");
-            __WEBPACK_IMPORTED_MODULE_1_jquery__("#toDate").css("color", "#555");
+        if (this.tripType != "oneway") {
+            if (__WEBPACK_IMPORTED_MODULE_1_jquery__('#toDate').val() < __WEBPACK_IMPORTED_MODULE_1_jquery__('#fromDate').val()) {
+                this.toastr.error("Invalid Travel Dates!", 'Error!');
+                __WEBPACK_IMPORTED_MODULE_1_jquery__("#fromDate").css("color", "red");
+                __WEBPACK_IMPORTED_MODULE_1_jquery__("#toDate").css("color", "red");
+                isAddable = false;
+            }
+            else {
+                __WEBPACK_IMPORTED_MODULE_1_jquery__("#fromDate").css("color", "#555");
+                __WEBPACK_IMPORTED_MODULE_1_jquery__("#toDate").css("color", "#555");
+            }
         }
         var oneway = true;
         var round = false;
@@ -462,6 +464,7 @@ var DashboardComponent = /** @class */ (function () {
             "isActive": true,
             "sendEvery": this.sendEvery
         };
+        console.log(this.data);
         if ((this.adults).length == 0) {
             this.data.passengerCount = '-';
         }
@@ -558,7 +561,7 @@ var DashboardComponent = /** @class */ (function () {
     };
     DashboardComponent.prototype.getDate = function (date) {
         var m_names = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
-        var d = new Date(date);
+        var d = new Date(((date.substr(0, 10)).replace('-', '/')).replace('-', '/'));
         var curr_date = d.getDate();
         var curr_month = d.getMonth();
         var curr_year = d.getFullYear();
