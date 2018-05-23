@@ -17,8 +17,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="211" column="3" selection-start-line="211" selection-start-column="3" selection-end-line="211" selection-end-column="3" />
+            <state relative-caret-position="121">
+              <caret line="182" column="35" selection-start-line="182" selection-start-column="35" selection-end-line="182" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -133,12 +133,13 @@
       <workItem from="1526483357889" duration="32000" />
       <workItem from="1526997323215" duration="598000" />
       <workItem from="1527072827013" duration="1634000" />
-      <workItem from="1527074864731" duration="1285000" />
+      <workItem from="1527074864731" duration="1710000" />
+      <workItem from="1527076692477" duration="668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6730000" />
+    <option name="totallyTimeSpent" value="7823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="201" y="150" width="1405" height="841" extended-state="0" />
@@ -150,8 +151,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32392472" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28613353" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.44892472" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29053557" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -173,6 +174,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3240">
+          <caret line="216" column="3" lean-forward="true" selection-start-line="216" selection-start-column="3" selection-end-line="216" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
@@ -244,10 +252,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../signUpTravel/signUp.html" />
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="334" column="11" selection-start-line="334" selection-start-column="11" selection-end-line="334" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="211" column="3" selection-start-line="211" selection-start-column="3" selection-end-line="211" selection-end-column="3" />
+        <state relative-caret-position="121">
+          <caret line="182" column="35" selection-start-line="182" selection-start-column="35" selection-end-line="182" selection-end-column="35" />
         </state>
       </provider>
     </entry>
