@@ -17,7 +17,7 @@ var config = {
 
 
 
-app.post('/api/delete', function(req, res) {
+app.post('/api/delete-alert', function(req, res) {
     sql.close();
     sql.connect(config, function (err) {
         if (err) res.json({"status": "Error", "data": err});
