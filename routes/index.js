@@ -18,21 +18,22 @@ var config = {
 
 
 app.post('/api/delete-alert', function(req, res) {
-    sql.close();
-    sql.connect(config, function (err) {
-        if (err) res.json({"status": "Error", "data": err});
-        var request = new sql.Request();
-        request.query("DELETE FROM Alerts where alertID = "+ req.body.id, function (err, recordset) {
-            if (err) console.log(err);
-            if(recordset){
-                res.json(recordset.recordset);
-            }
-            else{
-                res.json({});
-            }
-            sql.close();
-        });
-    });
+    // sql.close();
+    // sql.connect(config, function (err) {
+    //     if (err) res.json({"status": "Error", "data": err});
+    //     var request = new sql.Request();
+    //     request.query("DELETE FROM Alerts where alertID = "+ req.body.id, function (err, recordset) {
+    //         if (err) console.log(err);
+    //         if(recordset){
+    //             res.json(recordset.recordset);
+    //         }
+    //         else{
+    //             res.json({});
+    //         }
+    //         sql.close();
+    //     });
+    // });
+    res.json({"a" : "b"});
 });
 
 app.post('/api/update', function(req, res) {
