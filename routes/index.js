@@ -175,22 +175,23 @@ app.post('/api/get-alert-upcomming', function(req, res) {
     });
 });
 
-app.post('/api/delete', function(req, res) {
-    sql.close();
-    sql.connect(config, function (err) {
-        if (err) res.json({"status": "Error", "data": err});
-        var request = new sql.Request();
-        request.query("DELETE FROM Alerts where alertID = "+ req.body.id, function (err, recordset) {
-            if (err) console.log(err);
-            if(recordset){
-                res.json(recordset.recordset);
-            }
-            else{
-                res.json({});
-            }
-            sql.close();
-        });
-    });
+app.get('/api/delete', function(req, res) {
+    res.send("a");
+    // sql.close();
+    // sql.connect(config, function (err) {
+    //     if (err) res.json({"status": "Error", "data": err});
+    //     var request = new sql.Request();
+    //     request.query("DELETE FROM Alerts where alertID = "+ req.body.id, function (err, recordset) {
+    //         if (err) console.log(err);
+    //         if(recordset){
+    //             res.json(recordset.recordset);
+    //         }
+    //         else{
+    //             res.json({});
+    //         }
+    //         sql.close();
+    //     });
+    // });
 });
 
 app.post('/api/update', function(req, res) {
