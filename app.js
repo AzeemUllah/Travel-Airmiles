@@ -223,7 +223,6 @@ app.post('/api/get-alert-expired', function(req, res) {
     });
 });
 
-
 app.post('/api/get-alert-upcomming', function(req, res) {
     sql.close();
     sql.connect(config, function (err) {
@@ -243,6 +242,43 @@ app.post('/api/get-alert-upcomming', function(req, res) {
 
     });
 });
+
+app.post('/api/delete-alert', function(req, res) {
+    sql.close();
+    sql.connect(config, function (err) {
+        if (err) res.json({"status": "Error", "data": err});
+        var request = new sql.Request();
+        request.query("DELETE FROM Alerts where alertID = "+ req.body.id, function (err, recordset) {
+            if (err) console.log(err);
+            if(recordset){
+                res.json(recordset.recordset);
+            }
+            else{
+                res.json({"status": "error", "details": "Not deleted"});
+            }
+            sql.close();
+        });
+    });
+});
+
+app.post('/api/update', function(req, res) {
+    sql.close();
+    sql.connect(config, function (err) {
+        if (err) res.json({"status": "Error", "data": err});
+        var request = new sql.Request();
+        request.query("UPDATE Alerts SET fromCode = '"+req.body.from+"', toCode = '"+req.body.to+"',departureDate = '"+req.body.departureDate+"', returnDate = '"+req.body.returnDate+"', oneWay= '"+req.body.oneway+"', withMiles = '"+req.body.miles+"',exactDates = '"+req.body.exactDates+"',passengerCount = '"+req.body.passengerCount+"',stops= '"+req.body.stops+"',duration= '"+req.body.duration+"',airlines= '"+req.body.airlines+"',travelClass= '"+req.body.travelClass+"',isActive= '"+req.body.isActive+"' WHERE alertId = " + req.body.id, function (err, recordset) {
+            if (err) console.log(err);
+            if(recordset){
+                res.json(recordset.recordset);
+            }
+            else{
+                res.json({});
+            }
+            sql.close();
+        });
+    });
+});
+
 
 
 app.use(express.static(path.join(__dirname, 'views')));
