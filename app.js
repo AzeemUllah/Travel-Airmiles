@@ -272,7 +272,7 @@ app.post('/api/update', function(req, res) {
                 res.json(recordset.recordset);
             }
             else{
-                res.json({});
+                res.json({"status": "error" , "details": err});
             }
             sql.close();
         });
