@@ -266,14 +266,14 @@ app.post('/api/update', function(req, res) {
     sql.connect(config, function (err) {
         if (err) res.json({"status": "Error", "data": err});
         var request = new sql.Request();
-        var q1 = "UPDATE Alerts SET fromCode = '"+req.body.from+"', toCode = '"+req.body.to+"',departureDate = '"+req.body.departureDate+"', returnDate = '"+req.body.returnDate+"', oneWay= '"+req.body.oneway+"', withMiles = '"+req.body.miles+"',exactDates = '"+req.body.exactDates+"',passengerCount = '"+req.body.passengerCount+"',stops= '"+req.body.stops+"',duration= '"+req.body.duration+"',airlines= '"+req.body.airlines+"',travelClass= '"+req.body.travelClass+"',isActive= '"+req.body.isActive+"' WHERE alertId = " + req.body.id;
+        var q1 = "UPDATE Alerts SET fromCode = '"+req.body.from+"', toCode = '"+req.body.to+"',departureDate = '"+req.body.departureDate+"', returnDate = '"+req.body.returnDate+"', oneWay= '"+req.body.oneway+"', withMiles = '"+req.body.miles+"',exactDates = '"+req.body.exactDates+"',passengerCount = '"+req.body.passengerCount+"',stops= '"+req.body.stops+"',duration= '"+req.body.duration+"',airlines= '"+req.body.airlines+"',travelClass= '"+req.body.travelClass+"',isActive= '"+req.body.isActive+"' WHERE alertId = " + req.body.alertID;
         if(req.body.returnDate =='-') {
-            q1 = "UPDATE Alerts SET fromCode = '"+req.body.from+"', toCode = '"+req.body.to+"',departureDate = '"+req.body.departureDate+"', oneWay= '"+req.body.oneway+"', withMiles = '"+req.body.miles+"',exactDates = '"+req.body.exactDates+"',passengerCount = '"+req.body.passengerCount+"',stops= '"+req.body.stops+"',duration= '"+req.body.duration+"',airlines= '"+req.body.airlines+"',travelClass= '"+req.body.travelClass+"',isActive= '"+req.body.isActive+"' WHERE alertId = " + req.body.id;
+            q1 = "UPDATE Alerts SET fromCode = '"+req.body.from+"', toCode = '"+req.body.to+"',departureDate = '"+req.body.departureDate+"', oneWay= '"+req.body.oneway+"', withMiles = '"+req.body.miles+"',exactDates = '"+req.body.exactDates+"',passengerCount = '"+req.body.passengerCount+"',stops= '"+req.body.stops+"',duration= '"+req.body.duration+"',airlines= '"+req.body.airlines+"',travelClass= '"+req.body.travelClass+"',isActive= '"+req.body.isActive+"' WHERE alertId = " + req.body.alertID;
         }
         request.query(q1, function (err, recordset) {
             if (err) console.log(err);
             if(recordset){
-                res.json(req.body);
+                res.json(recordset.rowsAffected[0]);
             }
             else{
                 res.json({"status": "error" , "details": err});
