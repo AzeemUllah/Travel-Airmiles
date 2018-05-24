@@ -289,7 +289,7 @@ app.post('/api/get-single-alert', function(req, res) {
             if (err) console.log(err);
             if((recordset)) {
                 if ((recordset.recordset[0])) {
-                    if (recordset.recordset[0].ID > 0) {
+                    if (recordset.recordset[0].alertId > 0) {
                         res.json({"status": "Ok", "data": recordset.recordset[0]});
                     }
                     else {
