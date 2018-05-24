@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d9ad6ab-1004-4f0b-b0dd-7031e95c169a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +25,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="276" column="13" lean-forward="true" selection-start-line="276" selection-start-column="13" selection-end-line="276" selection-end-column="13" />
+            <state relative-caret-position="127">
+              <caret line="268" column="537" selection-start-line="268" selection-start-column="537" selection-end-line="268" selection-end-column="537" />
             </state>
           </provider>
         </entry>
@@ -70,7 +70,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="182" />
     <option name="y" value="83" />
     <option name="width" value="1405" />
@@ -145,12 +145,12 @@
       <workItem from="1527076692477" duration="1419000" />
       <workItem from="1527078677797" duration="936000" />
       <workItem from="1527080160638" duration="435000" />
-      <workItem from="1527150697442" duration="16260000" />
+      <workItem from="1527150697442" duration="16986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26205000" />
+    <option name="totallyTimeSpent" value="26931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="182" y="83" width="1405" height="841" extended-state="1" />
@@ -296,8 +296,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="276" column="13" lean-forward="true" selection-start-line="276" selection-start-column="13" selection-end-line="276" selection-end-column="13" />
+        <state relative-caret-position="127">
+          <caret line="268" column="537" selection-start-line="268" selection-start-column="537" selection-end-line="268" selection-end-column="537" />
         </state>
       </provider>
     </entry>
