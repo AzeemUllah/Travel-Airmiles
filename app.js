@@ -280,6 +280,30 @@ app.post('/api/update', function(req, res) {
 });
 
 
+app.post('/api/get-single-alert', function(req, res) {
+    sql.close();
+    sql.connect(config, function (err) {
+        if (err) res.json({"status": "Error", "data": err});
+        var request = new sql.Request();
+        request.query("select * from Alerts where alertId='"+req.body.id+"';", function (err, recordset) {
+            if (err) console.log(err);
+            if((recordset)) {
+                if ((recordset.recordset[0])) {
+                    if (recordset.recordset[0].ID > 0) {
+                        res.json({"status": "Ok", "data": recordset.recordset[0]});
+                    }
+                    else {
+                        res.json({"status": "Error", "data": "User doesn't exists!"});
+                    }
+                }
+            }
+            sql.close();
+        });
+
+
+    });
+});
+
 
 app.use(express.static(path.join(__dirname, 'views')));
 app.get('*', function(req, res) {
