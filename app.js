@@ -273,7 +273,7 @@ app.post('/api/update', function(req, res) {
         request.query(q1, function (err, recordset) {
             if (err) console.log(err);
             if(recordset){
-                res.json(recordset.rowsAffected[0]);
+                res.json(req.body);
             }
             else{
                 res.json({"status": "error" , "details": err});
