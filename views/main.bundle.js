@@ -405,7 +405,7 @@ var DashboardComponent = /** @class */ (function () {
                 if (val == 1) {
                     _this.toastr.success("Alert Update!", 'Success!');
                     setTimeout(function () {
-                        // window.location.reload();
+                        window.location.reload();
                     }, 1000);
                 }
                 else {
@@ -712,7 +712,7 @@ var DashboardComponent = /** @class */ (function () {
                 if (val == 1) {
                     _this.toastr.success("Alert Saved!", 'Success!');
                     setTimeout(function () {
-                        // window.location.reload();
+                        window.location.reload();
                     }, 1000);
                 }
                 else {
