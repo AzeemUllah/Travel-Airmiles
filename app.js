@@ -285,7 +285,7 @@ app.post('/api/get-single-alert', function(req, res) {
     sql.connect(config, function (err) {
         if (err) res.json({"status": "Error", "data": err});
         var request = new sql.Request();
-        request.query("select * from Alerts where alertId='"+req.body.id+"';", function (err, recordset) {
+        request.query("select * from Alerts where alertId = "+req.body.id, function (err, recordset) {
             if (err) console.log(err);
             if((recordset)) {
                 if ((recordset.recordset[0])) {
