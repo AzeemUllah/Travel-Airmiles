@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d9ad6ab-1004-4f0b-b0dd-7031e95c169a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/inline.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/views/inline.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/views/main.bundle.js.map" afterDir="false" />
-    </list>
+    <list default="true" id="4d9ad6ab-1004-4f0b-b0dd-7031e95c169a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,16 +144,15 @@
       <workItem from="1527078677797" duration="936000" />
       <workItem from="1527080160638" duration="435000" />
       <workItem from="1527150697442" duration="17275000" />
-      <workItem from="1527239151815" duration="546000" />
+      <workItem from="1527239151815" duration="671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27766000" />
+    <option name="totallyTimeSpent" value="27891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="182" y="83" width="1405" height="841" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
