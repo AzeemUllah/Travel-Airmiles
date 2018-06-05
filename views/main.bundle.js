@@ -1632,19 +1632,22 @@ var HomepageComponent = /** @class */ (function () {
             this.getBase64(fileData);
         }
     };
-    HomepageComponent.prototype.gotoDashboard = function () {
-        this.router.navigate(['dashboard']);
-    };
     HomepageComponent.prototype.logout = function () {
         localStorage.removeItem('id');
         this.toastr.success("Logout Sucessful!", 'Success!');
         setTimeout(function () { window.location.reload(); }, 1000);
+    };
+    HomepageComponent.prototype.gotoDashboard = function () {
+        this.router.navigate(['dashboard']);
     };
     HomepageComponent.prototype.gotoHome = function () {
         this.router.navigate(['']);
     };
     HomepageComponent.prototype.gotoCards = function () {
         this.router.navigate(['cards']);
+    };
+    HomepageComponent.prototype.gotoBlog = function () {
+        this.router.navigate(['blog']);
     };
     HomepageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
